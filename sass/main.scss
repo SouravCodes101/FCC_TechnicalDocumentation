@@ -20,10 +20,19 @@ body {
     font-weight: 500;
     color: #333;
     padding: 1rem;
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+    
 }
 
 .container {
-    display: flex;
+    position: relative;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 20vw auto;
 }
 
 .navigation {
@@ -32,6 +41,11 @@ body {
     flex: 0 0 20%;
     background-color: #542e71;
     margin-right: 2rem;
+    position: fixed;
+    width: 20vw;
+    overflow-y: scroll;
+    top: 1rem;
+    bottom: 1rem;
 
     &__heading {
         font-size: 2.5rem;
@@ -103,6 +117,8 @@ body {
 
 .main__doc {
     padding-left: 15px;
+    
+    grid-column-start: 2;
 }
 
 .main-section header {
@@ -136,4 +152,33 @@ body {
 
 .inner {
     margin: 1rem 0;
+}
+
+.mdn:link,
+.mdn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#fb3640;
+    transition: all .2s ease;
+}
+
+.mdn:hover {
+    color:#fc5760;
+}
+
+.btn:link,
+.btn:hover {
+    position: fixed;
+    bottom:1rem;
+    right:2rem;
+    transition: all .2s ease-out;
+}
+
+.fa-arrow-circle-up {
+    color: #542e71;
+    border-radius: 10rem; 
+}
+
+.fa-arrow-circle-up:hover {
+    color:#fb3640;
 }
